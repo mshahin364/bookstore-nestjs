@@ -10,4 +10,11 @@ export class CommandsService {
       resolve(this.commands);
     });
   }
+
+  addCommands(command): Promise<any> {
+    return new Promise(resolve => {
+      this.commands.push(command);
+      resolve(this.commands);
+    });
+  }
 }
